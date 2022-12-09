@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -21,7 +22,7 @@ float *mat(int m, int n)
     
     if (n <= 0 || m <= 0) return NULL;
     if (!(p = (float *) malloc(sizeof(float) * m * n))) {
-        debug_printf("Matrix memory allocation error: m=%d, n=%d\n", m, n);
+        printf("Matrix memory allocation error: m=%d, n=%d\n", m, n);
     }
 	
     return p;
@@ -41,7 +42,7 @@ float *zeros(int m, int n)
     
     if (n <= 0 || m <= 0) return NULL;
     if (!(p = (float *) calloc(sizeof(float), m * n))) {
-        debug_printf("Matrix memory allocation error: m=%d, n=%d\n", m, n);
+        printf("Matrix memory allocation error: m=%d, n=%d\n", m, n);
     }
 
     return p;	
